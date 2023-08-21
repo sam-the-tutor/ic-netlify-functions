@@ -1,14 +1,13 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 const handler = async (event) => {
   var data = {
-    service_id: process.env.SERVICE_ID,
-    template_id: process.env.EMPLOYEE_TEMPLATE_ID,
-    user_id: process.env.USER_ID,
+    service_id: "service_0ktpvva",
+    template_id: "template_ijchvpf",
+    user_id: "LtUb64l5xrFOlg_Sb",
     template_params: {
       job_name: "Software Engineering",
       employee_name: "Paul",
-      from_name: "IC JobBoard",
-      employee_address: "peacevian66#gmail.com",
+      employee_address: "peacevian66@gmail.com",
       reply_to: "smartskillsweb3@gmail.com",
     },
   }
