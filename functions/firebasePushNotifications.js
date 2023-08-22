@@ -8,6 +8,8 @@ exports.handler = async function (event, context) {
     icon: "ic-logo.jpg",
     click_action: myData.applicant_link,
   }
+  const to =
+    "ewYwhLDp0P_9H9U2EEFMqJ:APA91bFdimxPX_wxg6X-WWtSd3hZ5M990wURboxQkoE04vk8jisy-JVYInw7Kflljehgvet0fdMdI6jS-BoVEPdDBWxQ7FhdIu7-o1TraQjmKKkVAApGbTC34ZznAxE54Sg23cBFeNnm"
   try {
     const response = fetch("https://fcm.googleapis.com/fcm/send", {
       method: "POST",
@@ -17,7 +19,7 @@ exports.handler = async function (event, context) {
       },
       body: JSON.stringify({
         notification: notification,
-        to: myData.phone_code,
+        to: to,
       }),
     })
 
