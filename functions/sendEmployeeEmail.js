@@ -38,11 +38,12 @@ exports.handler = async function (event, context) {
     //     ),
     //   }
     // }
+    const myData = JSON.parse(event.body)
 
     return {
       statusCode: 200,
       body: JSON.stringify({
-        data: event.body,
+        data: myData.body.name,
         message: "Data well recieved",
       }),
     }
