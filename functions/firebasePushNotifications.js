@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {
   var key =
-    "AAAAgEy3QBw:APA91bEHp0aJ0OnC4YXfXgxPi2jmefXrqnYPGOpwsOEY27ARkztGycfUEnCs0GDcQ-qAXk5govzPLXUJluAtCwIZ-StTQDT8tGdaFAw7s3cuuy4IFBsCtXtekaYWzv9YzOsyLS6X2mFb"
+    "AAAAgEy3QBw:APA91bHj5KukuE5qtGeHHBAmmLGE59YgpdU3Wr8J8bOjlGrUvEcSo_mkUiodFNW2J8xYGVNdeAyHuw9SkwfhLB75d5BBHPcv76mBq9gfsRkjDL94nw9qaeuArnoaAo96RZQLGzTGoihP"
   var to =
-    "exLwpsnkBjWEuUlnjwmwci:APA91bHDRd_HSy5E2B0Lw40TFyyPSEKr9ovA2r5cn5pp9_IiGUb81Tl_cRYrIp2FvcIyFN9EiNjtMWe-WXVjq8ApvA2MBgMPQ0YqGc0zDwLA1ZgDoaSlLcwpgC0EqhY-8TdwwsxXSVzb"
+    "ewYwhLDp0P_9H9U2EEFMqJ:APA91bFdimxPX_wxg6X-WWtSd3hZ5M990wURboxQkoE04vk8jisy-JVYInw7Kflljehgvet0fdMdI6jS-BoVEPdDBWxQ7FhdIu7-o1TraQjmKKkVAApGbTC34ZznAxE54Sg23cBFeNnm"
 
   var notification = {
     title: "Portugal vs. Denmark",
@@ -23,13 +23,11 @@ exports.handler = async function (event, context) {
         to: to,
       }),
     })
-
-    const responseBody = (await response).json()
-    console.log(responseBody)
+    const responseText = (await response).text()
 
     return {
       statusCode: 200,
-      body: JSON.stringify("working"),
+      body: JSON.stringify(responseText),
     }
   } catch (err) {
     console.log(err)
