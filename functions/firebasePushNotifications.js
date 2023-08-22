@@ -3,12 +3,11 @@ exports.handler = async function (event, context) {
 
   var notification = {
     title: "New Job Application",
-
-    body: `You have recieved a new job application for the ${myData.job_name}`,
-    icon: "ic-logo.jpg",
-    click_action: myData.applicant_link,
+    body: "You have recieved a new job application for the",
+    icon: "https://www.kasandbox.org/programming-images/avatars/primosaur-ultimate.png",
+    click_action: "https://samthetutor.hashnode.dev",
   }
-  const to =
+  const ton =
     "ewYwhLDp0P_9H9U2EEFMqJ:APA91bFdimxPX_wxg6X-WWtSd3hZ5M990wURboxQkoE04vk8jisy-JVYInw7Kflljehgvet0fdMdI6jS-BoVEPdDBWxQ7FhdIu7-o1TraQjmKKkVAApGbTC34ZznAxE54Sg23cBFeNnm"
   const key =
     "AAAAgEy3QBw:APA91bEHp0aJ0OnC4YXfXgxPi2jmefXrqnYPGOpwsOEY27ARkztGycfUEnCs0GDcQ-qAXk5govzPLXUJluAtCwIZ-StTQDT8tGdaFAw7s3cuuy4IFBsCtXtekaYWzv9YzOsyLS6X2mFb"
@@ -22,7 +21,7 @@ exports.handler = async function (event, context) {
       },
       body: JSON.stringify({
         notification: notification,
-        to: to,
+        to: ton,
       }),
     })
 
