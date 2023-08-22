@@ -1,14 +1,13 @@
 exports.handler = async function (event, context) {
-  var key =
-    "AAAAgEy3QBw:APA91bHj5KukuE5qtGeHHBAmmLGE59YgpdU3Wr8J8bOjlGrUvEcSo_mkUiodFNW2J8xYGVNdeAyHuw9SkwfhLB75d5BBHPcv76mBq9gfsRkjDL94nw9qaeuArnoaAo96RZQLGzTGoihP"
-  var to =
-    "ewYwhLDp0P_9H9U2EEFMqJ:APA91bFdimxPX_wxg6X-WWtSd3hZ5M990wURboxQkoE04vk8jisy-JVYInw7Kflljehgvet0fdMdI6jS-BoVEPdDBWxQ7FhdIu7-o1TraQjmKKkVAApGbTC34ZznAxE54Sg23cBFeNnm"
+  const myData = JSON.parse(event.body)
+
+  var key = process.env.FIREBASE_SERVER_KEY
 
   var notification = {
-    title: "Portugal vs. Denmark",
-    body: "5 to 1",
+    title: `New ${myData.job_name} Application`,
+    body: "Your job post has one more person interested.",
     icon: "firebase-logo.png",
-    click_action: "http://placehold.it/120x120&text=image4",
+    click_action: myData.applicant_link,
   }
 
   try {
@@ -20,7 +19,7 @@ exports.handler = async function (event, context) {
       },
       body: JSON.stringify({
         notification: notification,
-        to: to,
+        to: myData.phone_code,
       }),
     })
     const responseText = (await response).text()
