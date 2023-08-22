@@ -1,16 +1,14 @@
 exports.handler = async function (event, context) {
-  const myData = JSON.parse(event.body)
-
+  var key =
+    "AAAAgEy3QBw:APA91bEHp0aJ0OnC4YXfXgxPi2jmefXrqnYPGOpwsOEY27ARkztGycfUEnCs0GDcQ-qAXk5govzPLXUJluAtCwIZ-StTQDT8tGdaFAw7s3cuuy4IFBsCtXtekaYWzv9YzOsyLS6X2mFb"
+  var to =
+    "e8rTAvdFRm0wnYtDABGXqr:APA91bFBTLy8hhkD3XnfQMxlETgdrzdHGCKY9RV4Lxiwog7rRk1P_hX9-4oZQLxUbCbF6ab92p6H606vA2plVN7HVmLOOoul8hxDL3c85Ef_9b6T3-22NcEqglPfoFYK3Lcds7-kl2Wx"
   var notification = {
-    title: "New Job Application",
-    body: "You have recieved a new job application for the",
-    icon: "https://www.kasandbox.org/programming-images/avatars/primosaur-ultimate.png",
-    click_action: "https://samthetutor.hashnode.dev",
+    title: "Portugal vs. Denmark",
+    body: "5 to 1",
+    icon: "firebase-logo.png",
+    click_action: "http://placehold.it/120x120&text=image4",
   }
-  const ton =
-    "ewYwhLDp0P_9H9U2EEFMqJ:APA91bFdimxPX_wxg6X-WWtSd3hZ5M990wURboxQkoE04vk8jisy-JVYInw7Kflljehgvet0fdMdI6jS-BoVEPdDBWxQ7FhdIu7-o1TraQjmKKkVAApGbTC34ZznAxE54Sg23cBFeNnm"
-  const key =
-    "AAAAgEy3QBw:APA91bHj5KukuE5qtGeHHBAmmLGE59YgpdU3Wr8J8bOjlGrUvEcSo_mkUiodFNW2J8xYGVNdeAyHuw9SkwfhLB75d5BBHPcv76mBq9gfsRkjDL94nw9qaeuArnoaAo96RZQLGzTGoihP"
 
   try {
     const response = fetch("https://fcm.googleapis.com/fcm/send", {
@@ -21,15 +19,16 @@ exports.handler = async function (event, context) {
       },
       body: JSON.stringify({
         notification: notification,
-        to: ton,
+        to: to,
       }),
     })
 
-    const responseBody = await response.json()
+    const responseBody = (await response).json()
+    console.log(responseBody)
 
     return {
       statusCode: 200,
-      body: JSON.stringify(responseBody),
+      body: JSON.stringify("working"),
     }
   } catch (err) {
     console.log(err)
