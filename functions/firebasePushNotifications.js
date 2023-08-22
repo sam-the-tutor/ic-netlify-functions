@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {
   const ton =
     "ewYwhLDp0P_9H9U2EEFMqJ:APA91bFdimxPX_wxg6X-WWtSd3hZ5M990wURboxQkoE04vk8jisy-JVYInw7Kflljehgvet0fdMdI6jS-BoVEPdDBWxQ7FhdIu7-o1TraQjmKKkVAApGbTC34ZznAxE54Sg23cBFeNnm"
   const key =
-    "AAAAgEy3QBw:APA91bEHp0aJ0OnC4YXfXgxPi2jmefXrqnYPGOpwsOEY27ARkztGycfUEnCs0GDcQ-qAXk5govzPLXUJluAtCwIZ-StTQDT8tGdaFAw7s3cuuy4IFBsCtXtekaYWzv9YzOsyLS6X2mFb"
+    "AAAAgEy3QBw:APA91bHj5KukuE5qtGeHHBAmmLGE59YgpdU3Wr8J8bOjlGrUvEcSo_mkUiodFNW2J8xYGVNdeAyHuw9SkwfhLB75d5BBHPcv76mBq9gfsRkjDL94nw9qaeuArnoaAo96RZQLGzTGoihP"
 
   try {
     const response = fetch("https://fcm.googleapis.com/fcm/send", {
