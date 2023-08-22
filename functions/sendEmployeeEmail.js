@@ -42,7 +42,7 @@ exports.handler = async function (event, context) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify(myData),
+      body: JSON.stringify(myData.name),
     }
   } catch (e) {
     return {
