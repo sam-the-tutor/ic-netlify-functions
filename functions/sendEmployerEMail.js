@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {
     template_params: {
       job_name: myData.job_name,
       employer_email: myData.employer_email,
-      applicant_link: myData.employee_email,
+      applicant_link: myData.applicant_link,
     },
   }
 
