@@ -42,10 +42,7 @@ exports.handler = async function (event, context) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        data: myData.body.name,
-        message: "Data well recieved",
-      }),
+      body: JSON.stringify(myData),
     }
   } catch (e) {
     return {
