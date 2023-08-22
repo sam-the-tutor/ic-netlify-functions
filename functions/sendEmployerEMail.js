@@ -35,9 +35,7 @@ exports.handler = async function (event, context) {
     } else {
       return {
         statusCode: 400,
-        body: JSON.stringify(
-          "Email not sent. Unknown error.Please try again later"
-        ),
+        body: JSON.stringify(responseText),
       }
     }
     //catch any errors and return them to the user
