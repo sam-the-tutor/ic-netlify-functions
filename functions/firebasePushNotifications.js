@@ -2,7 +2,8 @@ exports.handler = async function (event, context) {
   var key =
     "AAAAgEy3QBw:APA91bEHp0aJ0OnC4YXfXgxPi2jmefXrqnYPGOpwsOEY27ARkztGycfUEnCs0GDcQ-qAXk5govzPLXUJluAtCwIZ-StTQDT8tGdaFAw7s3cuuy4IFBsCtXtekaYWzv9YzOsyLS6X2mFb"
   var to =
-    "e8rTAvdFRm0wnYtDABGXqr:APA91bFBTLy8hhkD3XnfQMxlETgdrzdHGCKY9RV4Lxiwog7rRk1P_hX9-4oZQLxUbCbF6ab92p6H606vA2plVN7HVmLOOoul8hxDL3c85Ef_9b6T3-22NcEqglPfoFYK3Lcds7-kl2Wx"
+    "exLwpsnkBjWEuUlnjwmwci:APA91bHDRd_HSy5E2B0Lw40TFyyPSEKr9ovA2r5cn5pp9_IiGUb81Tl_cRYrIp2FvcIyFN9EiNjtMWe-WXVjq8ApvA2MBgMPQ0YqGc0zDwLA1ZgDoaSlLcwpgC0EqhY-8TdwwsxXSVzb"
+
   var notification = {
     title: "Portugal vs. Denmark",
     body: "5 to 1",
