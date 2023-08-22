@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
     user_id: process.env.USER_ID,
     template_params: {
       job_name: myData.job_name,
-      employer_email: myData.to_name,
+      employer_email: myData.employer_email,
       applicant_link: myData.employee_email,
     },
   }
