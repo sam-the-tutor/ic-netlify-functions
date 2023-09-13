@@ -8,9 +8,11 @@ exports.handler = async function (event, context) {
     template_id: process.env.EMPLOYEE_TEMPLATE_ID,
     user_id: process.env.USER_ID,
     template_params: {
-      job_name: myData.job_name,
-      to_name: myData.to_name,
-      employee_email: myData.employee_email,
+      token_name: myData.token,
+      to_email: myData.email,
+      token_amount: myData.amount,
+      payer: myData.payer,
+      account_address: myData.owner,
     },
   }
 
