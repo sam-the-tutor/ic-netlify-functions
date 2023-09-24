@@ -11,7 +11,7 @@ exports.handler = async function (event, context) {
     template_params: {
       token_name: myData.token,
       to_email: myData.email,
-      token_amount: myData.amount,
+      token_amount: formattedAmount,
       payer: myData.payer,
       account_address: myData.owner,
     },
