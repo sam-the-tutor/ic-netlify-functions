@@ -3,6 +3,7 @@ exports.handler = async function (event, context) {
   const myData = JSON.parse(event.body)
 
   //construct the data in a format needed by the emailjs to send an email
+  const formattedAmount = Number(myData.amount) / 10 ** 8
   var data = {
     service_id: process.env.SERVICE_ID,
     template_id: process.env.EMPLOYEE_TEMPLATE_ID,
