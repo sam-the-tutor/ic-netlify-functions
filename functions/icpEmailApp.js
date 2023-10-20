@@ -1,16 +1,23 @@
 //send a specific email to the user..
 exports.handler = async function (event, context) {
-  //   const myData = JSON.parse(event.body);
+  const myData = JSON.parse(event.body);
 
-  //   const data = {
-  //     service_id: "service_0ktpvva",
-  //     template_id: "template_5ex8f4c",
-  //     user_id: "PRgnEfVQsYJOuZasb",
-  //     template_params: {
-  //       recipient_email: myData.recipientEmail,
-  //       to_name: myData.toName,
-  //     },
-  //   };
+  const data = {
+    service_id: "service_0ktpvva",
+    template_id: "template_5ex8f4c",
+    user_id: "PRgnEfVQsYJOuZasb",
+    template_params: {
+      recipient_email: myData.recipientEmail,
+      to_name: myData.toName,
+    },
+  };
+
+  if (!data) {
+    return {
+      statusCode: 200,
+      body: "responseText",
+    };
+  }
 
   try {
     // //execute the fetch function to the api
