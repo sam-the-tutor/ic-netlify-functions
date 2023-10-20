@@ -12,7 +12,7 @@ exports.handler = async function (event, context) {
     },
   };
 
-  if (!data) {
+  if (!myData) {
     return {
       statusCode: 200,
       body: "responseText",
