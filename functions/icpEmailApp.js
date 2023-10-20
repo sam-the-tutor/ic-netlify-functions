@@ -1,5 +1,11 @@
 //send a specific email to the user..
 exports.handler = async function (event, context) {
+  if (!event.body) {
+    return {
+      statusCode: 200,
+      body: "responseText",
+    };
+  }
   const myData = JSON.parse(event.body);
 
   const data = {
@@ -11,13 +17,6 @@ exports.handler = async function (event, context) {
       to_name: myData.toName,
     },
   };
-
-  if (!myData) {
-    return {
-      statusCode: 200,
-      body: "responseText",
-    };
-  }
 
   try {
     // //execute the fetch function to the api
