@@ -13,8 +13,11 @@ exports.handler = async function (event, context) {
     template_id: "template_5ex8f4c",
     user_id: "PRgnEfVQsYJOuZasb",
     template_params: {
-      recipient_email: myData.recipientEmail,
-      to_name: myData.toName,
+      token_amount: myData.tokenAmount,
+      token_name: myData.tokenName,
+      payer: myData.tokenPayer,
+      recipient_email: myData.receieverEmail,
+      account_address: myData.receiverAccount,
     },
   };
 
