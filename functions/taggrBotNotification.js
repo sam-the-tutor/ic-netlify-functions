@@ -5,9 +5,9 @@ exports.handler = async function (event, context) {
 
   //construct the data in a format needed by the emailjs to send an email
   var data = {
-    service_id: "service_v46belc",
-    template_id: "template_83d4t4k",
-    user_id: "W5xiGWGnY2RLxVD8y",
+    service_id: "service_0ktpvva",
+    template_id: "template_ijchvpf",
+    user_id: "PRgnEfVQsYJOuZasb",
     template_params: {
       principal_id: myData.principal_id,
       media_account: myData.media_account,
