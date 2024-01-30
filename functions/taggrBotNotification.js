@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {
   var data = {
     service_id: "service_v46belc",
     template_id: "template_83d4t4k",
-    user_id: process.env.USER_ID,
+    user_id: "PRgnEfVQsYJOuZasb",
     template_params: {
       principal_id: myData.principal_id,
       media_account: myData.media_account,
